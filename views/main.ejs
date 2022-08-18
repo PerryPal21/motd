@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PerryPal21/perry.css@master/perry.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+     <div class="container">
+        <style>
+      .msgbox {
+        background-color: #2B3A4C;
+        padding: 10px;
+      }
+        </style>
+      <h3>Perry's Message of the Day</h3>
+      <br>
+       <p>Here is a small board where I (Perry) post a message every single</p>
+        <p>I may or may not miss a day :D</p>
+
+      <br>
+      <% msgdb.slice().reverse().forEach(function(msgObj) { %>
+          <div class="msgbox">
+          <i><%=msgObj.date%></i>
+          <br>
+            <br>
+          <p><%= msgObj.msg %></p>
+          </div>
+          <br>
+      <% }); %>
+      </div>
+</html>
